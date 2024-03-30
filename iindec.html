@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantity increment decrement feature</title>
+    <style>
+        body{
+            background-color: #f7f6f7;
+        }
+     .product-card{
+    background-color: white;
+    width: 200px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0 ,0.2);
+    display: block;
+    margin: 30px auto;
+    padding: 3px;
+   
+}
+.bag-img{
+    height: 100px;
+    display: block;
+    margin: 10px auto;
+    border-radius: 20px;
+    padding: 10px 20px;
+    background-color: #8EC5FC;
+background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+
+}
+.product-description{
+    font-size: 10px;
+}
+.product-price{
+    font-weight: bold;
+    font-size: 20px;
+}
+.btn-buy-now{
+    background-color: #8EC5FC;
+background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+   border: none;
+   color: aliceblue;
+   padding: 5px 20px;
+   border-radius: 20px;
+   display: block;
+   margin: 10px auto;
+}
+.quantity-btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.btn-quantity{
+   height: 25px;
+}
+.quantity-text{
+    font-size: 20px;
+    margin: 15 auto;
+}
+    </style>
+</head>
+<body>
+    <div class="product-card">
+<img src="bag-remove.png" class="bag-img">
+<h1 class="product-title"> Vintage Leather Bag</h1>
+<p class="product-description">
+Stylish and Simple vintage leather bag. Perfect for carrying your essentials.
+</p>
+<p class="product-price"> ₹500/-</p>
+<div class="quantity-btn-container">
+    
+    <img src="minus.png" class="btn-quantity" onclick="dec()">
+    <span class="quantity-text" id="quantity-text">1 </span>
+
+    <img src="plus.png" class="btn-quantity" onclick="inc()">
+</div>
+
+<button type="button" class="btn-buy-now"> Buy Now</button>
+    </div>
+    </div>
+
+    <script>
+        function inc(){
+const quantityText = document.getElementById('quantity-text');
+let quantity =  parseInt(quantityText.innerText);
+
+if(quantity<10)
+{
+    quantityText.innerText =++ quantity ;
+} 
+else
+{
+    alert("You can;t add more than 10 items");
+}
+
+}
+function dec(){
+const quantityText = document.getElementById('quantity-text');
+let quantity =  parseInt(quantityText.innerText);
+
+if(quantity > 1){
+    quantityText.innerText = --quantity ;
+
+}
+else
+{
+    alert("You can;t add less than 1 items");
+}
+
+}
+    </script>
+</body>
+</html>
