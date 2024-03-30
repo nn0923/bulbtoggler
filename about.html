@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Class Modification</title> 
+    <style>
+.theme-icon{
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+     padding: 5px;
+    background-color: white;
+    border-radius: 5px;
+    
+     }
+.active{
+    border: 1px solid black;
+
+}
+.theme-dark{
+    background-color: black;
+    color: white;
+}
+.theme-light{
+   background-color: palevioletred;
+    color: black;
+}
+    </style>
+</head>
+<body id="body"  class="theme-light">
+    <div>
+        <img src="moon.png" class="theme-icon active" id="img-dark" onclick="darkMode()">
+        <img src="light.png" class="theme-icon" id="img-light" onclick="lightMode()">
+<h1>
+    This is Light/Dark mode theme changer
+</h1>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+             Atque  deleniti quo possimus facilis consectetur vel error animi ducimus provident voluptatum consequatur sit explicabo, similique optio voluptatem non perspiciatis
+              placeat fugiat!<br>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Atque  deleniti quo possimus facilis consectetur vel error animi ducimus provident voluptatum consequatur sit explicabo, similique optio voluptatem non perspiciatis
+               placeat fugiat!
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+             Atque  deleniti quo possimus facilis consectetur vel error animi ducimus provident voluptatum consequatur sit explicabo, similique optio voluptatem non perspiciatis
+              placeat fugiat!Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Atque  deleniti quo possimus facilis consectetur vel error animi ducimus provident voluptatum consequatur sit explicabo, similique optio voluptatem non perspiciatis
+               placeat fugiat!
+         </p>
+    </div>
+    <script>
+        function darkMode(){
+           const imgDark = document.getElementById('img-dark');
+           imgDrk.classList.add('active');
+
+           const imgLight = document.getElementById('img-light');
+           imgDrk.classList.remove('active');
+
+           const bodyElement = document.getElementById("body");
+           bodyElement.className = "theme-dark"
+        }
+        
+        function darkMode(){
+           const imgDark = document.getElementById('img-dark');
+           imgDrk.classList.remove('active');
+
+           const imgLight = document.getElementById('img-light');
+           imgDrk.classList.add('active');
+
+           const bodyElement = document.getElementById("body");
+           bodyElement.className = "theme-light"
+
+        }
+    </script>
+       
+</body>
+</html>
