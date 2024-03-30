@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb Toggler</title>
+    <style>
+        body{
+            background-color: #FF9A8B;
+background-image: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);
+
+       min-height: 100vh;
+
+        }
+.app-title{
+    text-align: center;
+}
+.looks-img{
+    height: 250px;
+}
+.look-cont{
+    background-color: white;
+    width: 400px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    padding-left: 50px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.Looks-Wear{
+   font-size: 25px;
+   margin: 0 20px;
+   padding: 10px 20px;
+   cursor: pointer;
+   color: black;
+   display: flex;
+   justify-content: center;
+   border: 1px;
+   border-radius: 30px;
+    
+}
+.Looks-Wear:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.btn-cont{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.btn-sarree{
+    background-color:paleturquoise;
+}
+.btn-traditional{
+    background-color: #FF9A8B;
+}
+.btn-western{
+    background-color: orange;
+}
+@media screen and (max-width: 600px){
+    .emoji-cont{
+        width: 80%;
+    }
+    .looks-img{
+        height: 150px;
+    }
+}
+    
+
+    </style>
+</head>
+<body>
+    <h1 class="app-title">Looks Wear </h1>
+
+    <div class="look-cont"> 
+        <img src="traditional look.jpg" class="looks-img" id="looks">
+
+    </div>
+    <div class=" btn-cont">
+     <button class="Looks-Wear btn-sarree" onclick="sarree()">Saree</button>
+    <button class="Looks-Wear btn-traditional" onclick="traditional()">Traditional</button>
+    <button class="Looks-Wear btn-western" onclick="western()">Western</button>
+
+    </div>
+    <script>
+        function saree(){
+            const lookElement = document.getElementById('looks');
+            lookElement.src = 'saree look.webp';
+        }
+        function traditional(){
+            const lookElement = document.getElementById('looks');
+           lookElement.src = 'traditional png';
+        }
+        function western(){
+            const lookElement = document.getElementById('looks');
+           lookElement.src = 'western png'
+        }
+    </script>
+    
+    
+</body>
+</html>

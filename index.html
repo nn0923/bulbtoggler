@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb Toggler</title>
+    <style>
+        body{
+       background-color: #4158D0;
+       background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+       min-height: 100vh;
+
+        }
+.app-title{
+    text-align: center;
+}
+.bulb-img{
+    height: 250px;
+}
+.bulb-cont{
+    background-color: white;
+    width: 400px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.btn-cont{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+}
+.btn-toggle{
+    font-size: 20px;
+    padding: 5px 20px;
+    border-radius: 40px;
+    border: none;
+    margin: 0 20px;
+    cursor: pointer;
+    color: white;
+}
+.btn-toggle:hover{
+    box-shadow: 0 0 10px #00000033;
+}
+.btn-on{
+    background-color: rgb(69, 206, 126);
+}
+.btn-off{
+    background-color: red;
+}
+@media screen and (max-width: 600px){
+    .bulb-cont{
+        width: 80%;
+    }
+    .bulb-img{
+        height: 150px;
+    }
+}
+    
+
+    </style>
+</head>
+<body>
+    <h1 class="app-title"> Bulb Toggler </h1>
+
+    <div class="bulb-cont"> 
+        <img src="bulb-off.png" class="bulb-img" id="bulb">
+
+    </div>
+    <div class=" btn-cont">
+     <button class="btn-toggle btn-on" onclick="toggleBulb('on')">On</button>
+    <button class="btn-toggle btn-off" onclick="toggleBulb('off')">Off</button>
+
+    </div>
+    <script>
+        function toggleBulb(state){
+            const bulbElement = document.getElementById('bulb');
+            if(state=='on'){
+                bulbElement.src='bulb-on.png';
+            }
+           else{
+            bulbElement.src='bulb-off.png'
+           }
+        }
+        
+    </script>
+    
+    
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb Toggler</title>
+    <style>
+        body{
+            background-color: #74EBD5;
+background-image: linear-gradient(90deg, #74EBD5 0%, #9FACE6 100%);
+
+       min-height: 100vh;
+
+        }
+.app-title{
+    text-align: center;
+}
+.emoji-img{
+    height: 250px;
+}
+.emoji-cont{
+    background-color: white;
+    width: 400px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    padding-left: 50px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.btn-cont{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+}
+.emoji-face{
+   font-size: 25px;
+   margin: 0 20px;
+   padding: 10px 20px;
+   cursor: pointer;
+   color: black;
+   display: flex;
+   justify-content: center;
+   border: 1px;
+   border-radius: 30px;
+    
+}
+.emoji-face:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.btn-happy{
+    background-color: rgb(219, 11, 80);
+}
+.btn-sad{
+    background-color: rgb(160, 50, 160);
+}
+@media screen and (max-width: 600px){
+    .emoji-cont{
+        width: 80%;
+    }
+    .emoji-img{
+        height: 150px;
+    }
+}
+    
+
+    </style>
+</head>
+<body>
+    <h1 class="app-title">Emoji face Chooser </h1>
+
+    <div class="emoji-cont"> 
+        <img src="happy.png" class="emoji-img" id="emoji">
+
+    </div>
+    <div class=" btn-cont">
+     <button class="emoji-face btn-happy" onclick="happy()">Happy</button>
+    <button class="emoji-face btn-sad" onclick="sad()">Sad</button>
+
+    </div>
+    <script>
+        function happy(){
+            const emojiElement = document.getElementById('emoji');
+            emojiElement.src = 'happy.png';
+        }
+        function sad(){
+            const emojiElement = document.getElementById('emoji');
+            emojiElement.src = 'sad.png';
+        }
+        
+    </script>
+    
+    
+</body>
+</html>
